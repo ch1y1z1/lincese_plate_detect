@@ -5,6 +5,7 @@ import typer
 app = typer.Typer()
 
 
+@app.command()
 def predict_video(
     source_path: str = typer.Argument(..., help="Path to the video to predict"),
     target_path: str = typer.Argument(..., help="Path to the output video"),
@@ -29,3 +30,7 @@ def predict_video(
     sv.process_video(
         source_path=source_path, target_path=target_path, callback=callback
     )
+
+
+if __name__ == "__main__":
+    app()
