@@ -13,3 +13,5 @@ output
 data
 ccpd_all
 ccpd_coco
+output*.mp4
+test.mp4
